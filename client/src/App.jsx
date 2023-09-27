@@ -6,6 +6,7 @@ function App() {
 
   return (
     <>
+      <h1 className="mainTitle"> My Contacts</h1>
       <Contacts />
     </>
   );
