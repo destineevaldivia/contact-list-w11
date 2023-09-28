@@ -1,7 +1,7 @@
-function Avatar() {
+function Avatar(props) {
   return (
     <div>
-      <img className="circle-img" src={props.imgURL} alt="contact_image" />
+      {/* <img className="circle-img" src={props.imgURL} alt="contact_image" /> */}
     </div>
   );
 }
