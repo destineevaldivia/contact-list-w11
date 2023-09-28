@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import Card from "./Card";
+import Avatar from "./avatar";
+import MiniCard from "./MiniCard";
 
 function Contacts() {
   // This is my original state with array of contacts
@@ -24,16 +25,18 @@ function Contacts() {
   }, []);
 
   return (
-    <div>
+    <div className="contacts-body">
       {contacts.map((contact) => (
+        <MiniCard key={`minicard+${contact.id}`} name={contact.name} />
+      ))}
+      {/* {contacts.map((contact) => (
         <Card
-          key={contact.id}
-          name={contact.name}
+          key={`card+${contact.id}`}
           phone={contact.phone}
           email={contact.email}
           notes={contact.notes}
         />
-      ))}
+      ))} */}
       <button> + Add New </button>
     </div>
   );
