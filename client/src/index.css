@@ -14,7 +14,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.contacts-body {
+.minicard-body {
   background-color: #f8f8f8;
   padding: 20px;
   border: 1px solid #ddd;
@@ -30,10 +30,12 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
 }
 .minicard:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.1s ease;
 }
 
 .circle-img {
@@ -50,7 +52,12 @@
   flex: 1;
   margin: 10% 20px 0;
 } */
-
+.form {
+  background-color: #f1b952cf;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 a {
   font-weight: 500;
   color: #646cff;

@@ -25,21 +25,57 @@ function Contacts() {
   }, []);
 
   return (
-    <div className="contacts-body">
-      {contacts.map((contact) => (
-        <MiniCard key={`minicard+${contact.id}`} name={contact.name} />
-      ))}
-      {/* {contacts.map((contact) => (
-        <Card
-          key={`card+${contact.id}`}
-          phone={contact.phone}
-          email={contact.email}
-          notes={contact.notes}
-        />
-      ))} */}
-      <button> + Add New </button>
+    <div>
+      <div className="minicard-body">
+        {contacts.map((contact) => (
+          <MiniCard
+            key={`minicard+${contact.id}`}
+            name={contact.name}
+            imgURL={contact.imgURL}
+          />
+        ))}
+      </div>
+
+      <div className="form">
+        <form>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label htmlFor="phone">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required
+          />
+
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+
+          <label htmlFor="notes">Notes:</label>
+          <textarea
+            id="notes"
+            name="notes"
+            placeholder="Enter any additional notes"
+          ></textarea>
+
+          <input type="submit" value="+ Add New Contact" className="button" />
+        </form>
+      </div>
     </div>
   );
 }
-
 export default Contacts;

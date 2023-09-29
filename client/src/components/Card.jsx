@@ -1,5 +1,6 @@
 import Contacts from "./Contacts";
 
+function Card(props) {}
 return (
   <div>
     <p>{props.name}</p>
