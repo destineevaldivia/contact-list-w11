@@ -1,115 +1,76 @@
+/* Reset some styles to ensure consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f0f0f0;
 }
 
+/* Style for the contact card container */
 .minicard-body {
-  background-color: #f8f8f8;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for the raised effect */
+  margin: 10px;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  gap: 20px;
-  padding: 10px;
-}
-
-.minicard {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff; /* Set a white background for cards */
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between;
-}
-.minicard:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.1s ease;
+  align-items: center;
+  transition: box-shadow 0.3s ease; /* Transition for the hover effect */
 }
 
+/* Hover effect */
+.minicard-body:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adjusted box shadow on hover */
+}
+
+/* Style for the circle image */
 .circle-img {
   border-radius: 50%;
-  border: 7px solid #fff;
-  width: 120px;
-  height: 120px;
-  align-content: left;
+  border: 3px solid #fff;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 }
-/* .name {
-  font-size: 2em;
-  color: #2d3436;
-  display: flex;
+
+/* Style for contact info */
+.contact-info {
   flex: 1;
-  margin: 10% 20px 0;
-} */
-.form {
-  background-color: #f1b952cf;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex; /* Use flexbox to center content vertically and horizontally */
-  justify-content: center; /* Horizontally center content */
-  align-items: center; /* Vertically center content */
-  min-width: 320px;
-  min-height: 100vh;
-  font-family: Arial, sans-serif; /* Choose a suitable font-family */
-  background-color: #f0f0f0; /* Add a background color to the body */
+/* Style for the name */
+.name {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Style for buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
 }
-button {
-  border-radius: 8px;
-  border: 1.5px solid;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+
+/* Style for each button */
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #ff9d64;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  text-decoration: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.button:hover {
+  background-color: #0056b3;
 }

@@ -26,12 +26,16 @@ function Contacts() {
 
   return (
     <div>
-      <div className="minicard-body">
+      <div className="contact-info">
         {contacts.map((contact) => (
           <MiniCard
             key={`minicard+${contact.id}`}
             name={contact.name}
-            imgURL={contact.imgURL}
+            phone={contact.phone}
+            email={contact.email}
+            notes={contact.notes}
+
+            // <Avatar key={`avatar+${contact.id}`} imgURL={contact.imgURL} />
           />
         ))}
       </div>
