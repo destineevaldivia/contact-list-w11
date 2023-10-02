@@ -2,7 +2,6 @@ import { useState } from "react";
 import Avatar from "./avatar";
 
 function MiniCard(props) {
-  const []
   function handleEdit() {
     console.log("clicked edit");
   }
